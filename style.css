@@ -1,0 +1,357 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf3;
+    color: #292524;
+}
+
+
+/* NAVIGATION */
+
+header {
+    background: #292524;
+    padding: 18px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: #fbbf24;
+    font-family: Georgia, serif;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #fbbf24;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.45)
+        ),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7")
+        center/cover;
+}
+
+.hero-content {
+    max-width: 700px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 55px;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.tag,
+.section-tag {
+    color: #d97706;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero .tag {
+    color: #fbbf24;
+}
+
+.btn {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 13px 25px;
+
+    background: #d97706;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+}
+
+.btn:hover {
+    background: #b45309;
+}
+
+
+/* SECTIONS */
+
+section {
+    max-width: 1050px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+section > h1 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    margin: 10px 0 30px;
+}
+
+
+/* SEARCH */
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.controls input,
+.controls select {
+    padding: 13px;
+
+    border: 1px solid #d6d3d1;
+    border-radius: 6px;
+
+    background: white;
+}
+
+.controls input {
+    flex: 1;
+}
+
+
+/* BLOG CARDS */
+
+.blogs {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 25px;
+}
+
+.blog {
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.blog:hover {
+    transform: translateY(-5px);
+}
+
+.blog-image {
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #fde68a;
+
+    font-size: 50px;
+}
+
+.blog-content {
+    padding: 22px;
+}
+
+.blog-category {
+    color: #d97706;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+.blog h2 {
+    font-family: Georgia, serif;
+
+    margin: 10px 0;
+
+    font-size: 23px;
+}
+
+.blog p {
+    line-height: 1.6;
+
+    color: #57534e;
+}
+
+.author {
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: #78716c;
+}
+
+
+/* CREATE */
+
+.create {
+    background: #fef3c7;
+
+    max-width: none;
+
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+form {
+    max-width: 650px;
+
+    margin: auto;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #d6d3d1;
+
+    border-radius: 6px;
+
+    font-family: Arial;
+}
+
+textarea {
+    height: 160px;
+
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #d97706;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #b45309;
+}
+
+
+/* ABOUT */
+
+.about {
+    text-align: center;
+}
+
+.about p:last-child {
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.8;
+
+    color: #57534e;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 40px;
+
+    background: #292524;
+
+    color: white;
+}
+
+footer h3 {
+    color: #fbbf24;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 7px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .create {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
